@@ -1,36 +1,61 @@
-# 🕵️‍♂️ Findly — Sistema de Achados e Perdidos
+<p align="center">
+  <img src="assets/logo-findly.jpg" alt="Findly Logo" width="300"/>
+</p>
 
-> Um sistema web e mobile que conecta quem **perdeu** com quem **encontrou** algo.  
-> Desenvolvido como projeto da disciplina de Engenharia de Software (UNIFIP, 2025.1).
+<h1 align="center"> Findly — Sistema de Achados e Perdidos</h1>
+
+<p align="center">
+  <em>O que você perdeu, a gente encontra.</em>
+</p>
+
+<p align="center">
+  <a href="#-sobre-o-projeto">Sobre</a> •
+  <a href="#-objetivos">Objetivos</a> •
+  <a href="#-tecnologias-utilizadas">Tecnologias</a> •
+  <a href="#-como-executar-o-projeto">Execução</a> •
+  <a href="#-protótipo">Protótipo</a> •
+  <a href="#-licença">Licença</a>
+</p>
 
 ---
 
-## 📘 Sobre o Projeto
-
-O **Findly (AchadoJá)** nasceu da necessidade de modernizar o processo de achados e perdidos em ambientes escolares e públicos.  
-A ideia é facilitar o encontro entre quem perdeu e quem encontrou objetos, usando **tecnologia, colaboração e praticidade**.
-
-O sistema permite o **cadastro de itens perdidos ou encontrados** com foto, descrição e localização, além de integração com **pontos oficiais de entrega** e **QR stickers** que identificam os objetos.
+<p align="center">
+  <img src="https://img.shields.io/badge/status-em%20desenvolvimento-blue" alt="Status">
+  <img src="https://img.shields.io/badge/node-%5E18.0-green" alt="Node.js">
+  <img src="https://img.shields.io/badge/licença-MIT-yellow" alt="Licença">
+</p>
 
 ---
 
-## 🎯 Objetivos
+##  Sobre o Projeto
+
+O **Findly (AchadoJá)** é um sistema digital que conecta pessoas que **perderam** e **encontraram** objetos.  
+O objetivo é tornar o processo de devolução de itens mais **eficiente, seguro e colaborativo**.
+
+A plataforma conta com:
+- Cadastro de itens perdidos/encontrados com **foto, descrição e localização**.
+- Integração com **pontos oficiais de entrega**.
+- Identificação de objetos via **QR stickers**.
+- Sistema de **notificações e histórico** por usuário.
+
+---
+
+##  Objetivos
 
 ### **Objetivo Geral**
-Desenvolver um sistema digital (web e mobile) para gerenciar objetos perdidos e encontrados, tornando a devolução mais rápida, segura e eficiente.
+Desenvolver um sistema web e mobile de achados e perdidos, ágil e intuitivo.
 
 ### **Objetivos Específicos**
-- Cadastrar itens perdidos/encontrados com foto, descrição e localização aproximada.  
-- Gerar e ler **QR Codes** para objetos valiosos.  
-- Enviar **notificações** para donos de itens encontrados.  
-- Manter **histórico** por usuário.  
-- Permitir **anonimato** na devolução.  
-- Integrar com **pontos oficiais de entrega** (escolas, comércios, etc).  
-- Garantir **privacidade e segurança** dos dados dos usuários.
+- Cadastrar itens perdidos/encontrados com foto e localização.  
+- Gerar e ler QR Codes.  
+- Notificar usuários automaticamente.  
+- Permitir anonimato nas devoluções.  
+- Integrar pontos de entrega oficiais.  
+- Garantir segurança e privacidade dos dados.
 
 ---
 
-## 👥 Equipe
+##  Equipe
 
 | Função | Nome | Matrícula |
 |:--|:--|:--|
