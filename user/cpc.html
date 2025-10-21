@@ -1,29 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastre o Ponto de Coleta</title>
-    <link rel="stylesheet" href="/css/cpc.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cadastro de Ponto de Coleta</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="/css/cpc.css">
+ <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
 </head>
 <body>
-    <head>
-        <div class="faixa_preta">
-            <div class="circulo">
-                <p class="nome">
-                    FINDLY
-                </p>
+    <header class="barra-superior-preta">
+        <div class="container-logo-topo">
+            <div class="circulo-logo">
+                <img src="/assets/logo-findly.jpg" alt="Logo Nulocal" class="logo-imagem">
             </div>
+            <span class="texto-ao-lado-topo">FINDLY</span>
         </div>
-    </head>
+    </header>
     <main>
-        <p class="p_1"><b>Ver ponto de</b> coleta.</p><input type="button" value="< Enviar" placeholder="Voltar" onclick="redirecionarPara('#')" class="button_1">
-        <h1><b>Cadastre o Ponto de Coleta</b></h1>
-        <input type="text" placeholder="Email:" class="inp"><br><br>
-        <input type="text" placeholder="Localização(GPS)" class="inp"><br><br>
-        <input type="text" placeholder="Hórario de Trabalho" class="inp"><br><br>
-        <h1><b>Atribuir usúarios como funcionario:</b></h1>
-        <input type="text" placeholder="Busque usúarios" class="inp">
+        <div class="conteudo-principal">
+            <h2 class="h2_1"><b>Ver pontos de</b> coleta.</h2>
+        </div>
+
+        <h1>Cadastre o ponto de coleta:</h1><input type="submit" name="voltar" value="< voltar" class="botao-voltar">
+
+        <div class="input-container">
+            <span class="icon">&#9993;</span> <span class="label">Endereço:</span>
+            <input type="text" class="custom-input" placeholder="">
+        </div><br>
+
+       <div class="gps-input-container">
+            <i class="fas fa-map-marker-alt gps-icon-fa"></i> 
+            <span class="gps-label">Localização(GPS):</span>
+            <input type="text" class="gps-input" placeholder="">
+        </div><br>
+
+        <div class="horario-input-container">
+            <i class="far fa-clock horario-icon-fa"></i>
+            <span class="horario-label">Horário de trabalho:</span>
+            <input type="text" class="horario-input" placeholder="">
+        </div>
+
+        <h1>Atribua usuários como funcionários:</h1>
+        <div class="busca-input-container">
+            <i class="fas fa-user busca-icon-fa"></i> 
+            <span class="busca-label">Busque usuários:</span>
+            <input type="text" class="busca-input" placeholder="">
+        </div>
     </main>
+
 </body>
 </html>
