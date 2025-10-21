@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Findly - Cadastre um item achado</title>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+  }
+
+  body {
+    background-color: #fff;
+    color: #111;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header {
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    padding: 12px 24px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-style: italic;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  header img {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 480px;
+    background: #fff;
+    margin-top: 30px;
+    padding: 24px;
+    border-radius: 8px;
+    margin-left: 40px;
+  }
+
+  h1, h2, h3, label, input::placeholder, button, p, span {
+    font-style: italic;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+
+  h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #5e5eae;
+    margin-bottom: 10px;
+  }
+
+  label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: block;
+    margin-top: 14px;
+    margin-bottom: 6px;
+  }
+
+  input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 18px;
+    border: 1px solid #ccc;
+    outline: none;
+    background-color: #f5f5f5;
+    font-style: italic;
+  }
+
+  input:focus {
+    border-color: #666;
+  }
+
+  .back-btn {
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 18px;
+    padding: 8px 16px;
+    font-weight: 600;
+    margin-top: 20px;
+    cursor: pointer;
+    font-style: italic;
+  }
+
+</style>
+</head>
+<body>
+
+  <header>
+    <img src="findly.jpg" alt="Logo Findly">
+    FINDLY
+  </header>
+
+  <div class="container">
+    <h3>Ver seus itens:</h3>
+    <h2>Cadastre um item que já foi achado:</h2>
+
+    <label for="descricao">Descrição:</label>
+    <input type="text" id="descricao" placeholder="Descreva o item">
+
+    <label for="iditem">ID do item:</label>
+    <input type="text" id="iditem" placeholder="Digite o ID do item">
+
+    <label for="qrcode">QR-Code:</label>
+    <input type="text" id="qrcode" placeholder="Digite o código QR">
+
+    <label for="categoria">Categoria:</label>
+    <input type="text" id="categoria" placeholder="Ex: Eletrônico, Roupa, Documento...">
+
+    <button class="back-btn">&lt; voltar</button>
+  </div>
+
+</body>
+</html>
