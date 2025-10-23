@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/logo-findly.jpg" alt="Findly Logo" width="300"/>
+  <img src="/Src/Frontend/assets/image/logo-findly.jpg" alt="Findly Logo" width="300"/>
 </p>
 
 <h1 align="center"> Findly — Sistema de Achados e Perdidos</h1>
