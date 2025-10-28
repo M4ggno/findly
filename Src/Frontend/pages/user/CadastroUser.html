@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cadastro | FINDLY</title>
+  <link rel="stylesheet" href="/css/pages/cadastro.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="header">
+    <span class="circle-logo">
+      <img src="/assets/image/logo-findly.jpg" alt="Logo FINDLY" class="header-logo">
+    </span>
+    <span class="logo-text">FINDLY</span>
+  </header>
+  <div class="site-bg">
+    <div class="cadastro-main">
+      <div class="cadastro-top">
+        <div class="cadastro-bloco-google">
+          <h1 class="cadastro-title">
+            <span><strong><em>Cadastre-se:</em></strong></span>
+          </h1>
+          <button class="google-btn">
+            <img src="/assets/image/google.png" class="icon-google" alt="Google" />
+            <span class="google-text"><strong>Inicie sua sessão com o google</strong></span>
+          </button>
+        </div>
+        <div class="cadastro-side">
+          <span class="login-question">Já tem uma conta?</span>
+          <span class="login-link">Faça login!</span>
+          <div class="bloco-voltar">
+            <button class="voltar-btn">&lt; voltar</button>
+          </div>
+        </div>
+      </div>
+      <hr class="linha"/>
+      <form class="cadastro-form">
+        <div class="double-line">
+          <div class="input-group">
+            <img src="/assets/image/email.png" class="input-icon" />
+            <label for="email"><strong><em>Email:</em></strong></label>
+            <input type="email" id="email" name="email" placeholder="Digite seu email" required>
+          </div>
+          <div class="input-group">
+            <span class="input-icon">🎓</span>
+            <label for="instituicao"><strong><em>Instituição de ensino:</em></strong></label>
+            <input type="text" id="instituicao" name="instituicao" placeholder="Nome da sua instituição">
+          </div>
+        </div>
+        <div class="double-line">
+          <div class="input-group">
+            <img src="/assets/image/security-interface.png" class="input-icon" />
+            <label for="senha"><strong><em>Senha:</em></strong></label>
+            <input type="password" id="senha" name="senha" placeholder="Crie uma senha" required>
+            <span class="toggle-password">👁</span>
+          </div>
+          <div class="input-group">
+            <span class="input-icon">👤</span>
+            <label for="nome"><strong><em>Nome completo:</em></strong></label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+          </div>
+        </div>
+        <button type="submit" class="main-btn">Cadastrar</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
