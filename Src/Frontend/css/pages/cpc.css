@@ -1,0 +1,48 @@
+/* Estilos para a faixa preta (Header) */
+body {
+    background-color: #ffffff;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.faixa-preta {
+    background-color: #000000;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-bottom: 1px solid #333;
+}
+
+.perfil-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.circulo-logo-novo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #4CAF50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #fff;
+    overflow: hidden;
+}
+
+.logo-imagem-nova {
+    width: 100%; 
+    height: 100%;
+    object-fit: contain; 
+}
+
+.nome-usuario-header {
+    color: white; /* Cor do texto */
+    font-size: 1.5em; 
+    font-weight: bold;
+}
+.h2_1{
+    color: #5F5D90;
+}
