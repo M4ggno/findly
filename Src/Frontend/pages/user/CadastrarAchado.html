@@ -1,38 +1,234 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="/css/components">
-<link rel="stylesheet" href="/css/pages/user/CadastrarAchado.css">
-<title>Findly - Cadastre um item achado</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Findly - Cadastre um item achado</title>
 
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background-color: #fff;
+      color: #111;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    header {
+      width: 100%;
+      background-color: #000;
+      color: #fff;
+      padding: 12px 24px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      font-style: italic;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    header img {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px 30px;
+      width: 100%;
+      max-width: 900px;
+      background: #fff;
+      margin-top: 40px;
+      margin-left: 40px;
+    }
+
+    .titles-left {
+      grid-column: 1 / 2;
+      margin-bottom: 5px;
+    }
+
+    .ver-seus {
+      color: #5e5eae;
+      font-weight: 700;
+      font-style: italic;
+      font-size: 1rem;
+    }
+
+    .itens {
+      color: #8c8caf;
+      font-weight: 400;
+      font-style: italic;
+      font-size: 1rem;
+      margin-left: 4px;
+    }
+
+    h2.title-main {
+      grid-column: 1 / 3;
+      font-family: "Poppins", sans-serif;
+      font-style: italic;
+      font-weight: 700;
+      font-size: 2.5rem;
+      margin-top: -50px;
+      margin-bottom: 20px;
+      color: #000000;
+      line-height: 1.2;
+    }
+
+    h2.title-main .blue-dark {
+      color: #000000;
+    }
+
+    h2.title-main .blue-light {
+      color: #000000;
+      font-size: 2.5rem;
+      display: inline-block;
+    }
+
+    .left-column,
+    .right-fields {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .left-column {
+      grid-column: 1 / 2;
+    }
+
+    .right-fields {
+      grid-column: 2 / 3;
+    }
+
+    .input-icon {
+      position: relative;
+      width: 100%;
+    }
+
+    .input-icon i {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #000;
+      opacity: 0.7;
+      font-size: 1rem;
+    }
+
+    .input-icon input {
+      width: 100%;
+      padding: 10px 10px 10px 36px;
+      border-radius: 18px;
+      border: none;
+      background-color: #d9d9d9;
+      outline: none;
+      font-style: italic;
+      color: #000;
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+
+    .input-icon input[type="file"] {
+      cursor: pointer;
+      padding-left: 36px;
+    }
+
+    .input-icon input::placeholder {
+      color: #000;
+      font-weight: 700;
+    }
+
+    .back-btn {
+      background-color: #000;
+      color: #fff;
+      border: none;
+      border-radius: 18px;
+      padding: 8px 20px;
+      font-weight: 600;
+      cursor: pointer;
+      font-style: italic;
+      margin-top: 1px;
+      align-self: flex-start;
+      transition: background-color 0.3s;
+    }
+
+    .back-btn:hover {
+      background-color: #333;
+    }
+
+    .bottom-text {
+      font-style: italic;
+      margin-top: 80px;
+      font-weight: 500;
+    }
+
+    .cadastro-de-itens {
+      color: #5e5eae;
+      font-weight: 700;
+    }
+
+    .encontrados {
+      color: #5e5eae;
+      font-weight: 1000;
+    }
+  </style>
 </head>
 <body>
-
   <header>
-    <img src="findly.jpg" alt="Logo Findly">
-    FINDLY
+    <a href="#"><img src="https://i.ibb.co/tMW3HMbF/Findly.jpg" alt="Findly"></a>
+    <h3>FINDLY</h3>
   </header>
 
   <div class="container">
-    <h3>Ver seus itens:</h3>
-    <h2>Cadastre um item que já foi achado:</h2>
+    <div class="titles-left">
+      <h3>
+        <span class="ver-seus">Ver seus</span>
+        <span class="itens">itens:</span>
+      </h3>
+    </div>
 
-    <label for="descricao">Descrição:</label>
-    <input type="text" id="descricao" class="input-email" placeholder="Descreva o item">
+    <h2 class="title-main">
+      <span class="blue-dark">Cadastre um item</span><br />
+      <span class="blue-light">que já foi achado:</span>
+    </h2>
 
-    <label for="iditem">ID do item:</label>
-    <input type="text" id="iditem" placeholder="Digite o ID do item">
+    <div class="left-column">
+      <div class="input-icon">
+        <i class="fa-solid fa-id-badge"></i>
+        <input type="text" id="iditem" placeholder="ID do item" />
+      </div>
 
-    <label for="qrcode">QR-Code:</label>
-    <input type="text" id="qrcode" placeholder="Digite o código QR">
+      <div class="input-icon">
+        <i class="fa-solid fa-qrcode"></i>
+        <input type="text" id="qrcode" placeholder="QR Code" />
+      </div>
 
-    <label for="categoria">Categoria:</label>
-    <input type="text" id="categoria" placeholder="Ex: Eletrônico, Roupa, Documento...">
+      <div class="input-icon">
+        <i class="fa-regular fa-calendar-days"></i>
+        <input type="text" id="descricao" placeholder="Descrição" />
+      </div>
 
-    <button class="back-btn">&lt; voltar</button>
+      <div class="input-icon">
+        <i class="fa-solid fa-list"></i>
+        <input type="text" id="categoria" placeholder="Categoria" />
+      </div>
+    </div>
+
+    <div class="right-fields">
+      <button class="back-btn">&lt; voltar</button>
+    </div>
   </div>
-
 </body>
 </html>
