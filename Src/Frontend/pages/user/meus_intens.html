@@ -4,31 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meus Itens</title>
-    <link rel="stylesheet" href="/css/pages/meus_intens.css">
-    <style>
-    </style>
+    <link rel="stylesheet" href="/Src/Frontend/css/pages/meus_intens.css">
+    <link rel="icon" type="image/png" href="/Src/Frontend/assets/image/logo-findly.jpg">
+    <link rel="stylesheet" href="/Src/Frontend/css/components/components.css">
 </head>
 <body>
 
     <header class="faixa-preta">
-    <div class="perfil-info">
-        
-        <div class="circulo-logo-novo">
-            <img src="/assets/image/logo-findly.jpg" alt="Logo Nulocal" class="logo-imagem-nova">
+        <div class="perfil-info">
+            
+            <div class="circulo-logo-novo">
+                <img src="/Src/Frontend/assets/image/logo-findly.jpg" alt="Logo Nulocal" class="logo-imagem-nova">
+            </div>
+            
+            <div class="nome-usuario-header">
+                FINDLY
+            </div>
+            
         </div>
-        
-        <div class="nome-usuario-header">
-            FINDLY
-        </div>
-        
-    </div>
-</header>
+    </header>
 
     <div class="header-container">
         
         <h1>Meus itens:</h1>
         
-        <input type="submit" name="voltar" value="< voltar" class="botao-voltar">
+        <input type="submit" name="voltar" value="voltar" class="back-button">
         
     </div>
 
@@ -40,12 +40,10 @@
                 <i class="fas fa-trash-alt"></i>
             </div>
             
-            <div class="side-bar"></div>
-            
             <div class="item-content">
                 
                 <div class="item-image-circle">
-                    <img src="https://www.iplacecorp.com.br/ccstore/v1/images/?source=/file/v6455601457677587180/products/226722.00-apple-iphone-15-256gb-rosa-mtp73be-a.jpg&height=300&width=300" alt="Iphone 13" class="item-img">
+                    <img src="/Src/Frontend/assets/image/iphon13rosa.avif" alt="Iphone 13" class="item-img">
                 </div>
                 
                 <div class="item-details">
@@ -53,14 +51,14 @@
                     <h2 class="item-title">Iphone 13</h2>
                     
                     <div class="info-field">
-                        Breve descrição do item
+                        <textarea placeholder="Breve descrição do intem"></textarea>
                     </div>
                     
                     <div class="info-field">
-                        Dia/Local/Hora
+                        <input type="date">
                     </div>
                     
-                    <p class="item-status">PERDIDO</p>
+                    <p>PERDIDO</p>
                 </div>
             </div>
             
