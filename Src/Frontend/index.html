@@ -1,26 +1,407 @@
 <!DOCTYPE html>
-<html lang="PT-BR">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FINDLY</title>
-    <link rel="stylesheet" href="css/components/components.css">
-    <link rel="stylesheet" href="css/pages/index.css">
-    <link rel="shortcut icon" href="assets/icons/favicon.ico" type="image/x-icon">
-</head>
-<style>
-    div {
-        margin: 20%;
-        align-items: center;
-        justify-content: center;
-        display: flex;
-
-    }
-</style>
-<body>
+    <meta name="description" content="Findly - Sistema de Achados e Perdidos">
+    <meta name="theme-color" content="#2196F3">
     
+    <title>Findly - O que você perdeu, a gente encontra</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/pages/main.css">
+    <link rel="stylesheet" href="css/components/components.css">
+    <link rel="stylesheet" href="css/components/responsive.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>🔍 Findly</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" onclick="navegarPara('home')">Home</a></li>
+                <li><a href="#buscar" onclick="navegarPara('buscar')">Buscar</a></li>
+                <li><a href="#cadastro" onclick="navegarPara('cadastro')">Cadastrar</a></li>
+                <li><a href="#perfil" onclick="navegarPara('perfil')">Perfil</a></li>
+                <li><button id="btn-tema" class="btn-tema" onclick="alternarTema()"><i class="fas fa-moon"></i></button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <main class="container main-content">
+        <!-- Seção Home -->
+        <section id="home" class="section section-home active">
+            <div class="hero">
+                <h2>O que você perdeu, a gente encontra!</h2>
+                <p>Findly é a plataforma que conecta pessoas que perderam e encontraram objetos de forma rápida, segura e colaborativa.</p>
+                
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="navegarPara('buscar')">
+                        <i class="fas fa-search"></i> Buscar Item
+                    </button>
+                    <button class="btn btn-secondary" onclick="abrirModalCadastro()">
+                        <i class="fas fa-plus"></i> Cadastrar Item
+                    </button>
+                </div>
+            </div>
+
+            <!-- Features -->
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-qrcode"></i>
+                    <h3>QR Code</h3>
+                    <p>Identifique objetos rapidamente através de QR stickers</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-map-location-dot"></i>
+                    <h3>Geolocalização</h3>
+                    <p>Encontre itens próximos à sua localização</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-image"></i>
+                    <h3>Fotos Claras</h3>
+                    <p>Upload e preview de imagens em alta qualidade</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-bell"></i>
+                    <h3>Notificações</h3>
+                    <p>Receba alertas de correspondências encontradas</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Buscar -->
+        <section id="buscar" class="section section-buscar">
+            <h2>Buscar Itens</h2>
+            
+            <div class="search-container">
+                <div class="search-input-group">
+                    <input 
+                        type="text" 
+                        id="search-input" 
+                        class="search-input" 
+                        placeholder="Buscar por nome, descrição ou local..."
+                        autocomplete="off"
+                    >
+                    <button class="btn btn-search" onclick="buscarItens()">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+
+                <div class="filtros">
+                    <div class="filtro-grupo">
+                        <label for="categoria-filtro">Categoria:</label>
+                        <select id="categoria-filtro" onchange="buscarItens()">
+                            <option value="">Todas as categorias</option>
+                            <option value="eletronicos">Eletrônicos</option>
+                            <option value="documentos">Documentos</option>
+                            <option value="acessorios">Acessórios</option>
+                            <option value="roupas">Roupas</option>
+                            <option value="outros">Outros</option>
+                        </select>
+                    </div>
+
+                    <div class="filtro-grupo">
+                        <label for="tipo-filtro">Tipo:</label>
+                        <select id="tipo-filtro" onchange="buscarItens()">
+                            <option value="">Todos</option>
+                            <option value="perdido">Perdido</option>
+                            <option value="encontrado">Encontrado</option>
+                        </select>
+                    </div>
+
+                    <div class="filtro-grupo">
+                        <label for="distancia-filtro">Distância (km):</label>
+                        <input 
+                            type="range" 
+                            id="distancia-filtro" 
+                            min="0" 
+                            max="50" 
+                            value="50" 
+                            onchange="buscarItens()"
+                        >
+                        <span id="distancia-valor">50 km</span>
+                    </div>
+
+                    <button class="btn btn-secondary" onclick="limparFiltros()">Limpar Filtros</button>
+                </div>
+            </div>
+
+            <!-- Resultados -->
+            <div id="resultados" class="resultados-container">
+                <p class="info-text">Use a busca acima para encontrar itens</p>
+            </div>
+        </section>
+
+        <!-- Seção Cadastro -->
+        <section id="cadastro" class="section section-cadastro">
+            <h2>Cadastrar Item</h2>
+            
+            <form id="form-cadastro" class="form-cadastro" novalidate>
+                <!-- Tipo de Item -->
+                <div class="form-group">
+                    <label for="tipo-item">
+                        <span class="label-required">*</span> Tipo de Item:
+                    </label>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="tipo" value="perdido" required checked>
+                            <span>Perdido</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="tipo" value="encontrado" required>
+                            <span>Encontrado</span>
+                        </label>
+                    </div>
+                    <span class="error-message" id="tipo-error"></span>
+                </div>
+
+                <!-- Nome do Item -->
+                <div class="form-group">
+                    <label for="nome-item">
+                        <span class="label-required">*</span> Nome do Item:
+                    </label>
+                    <input 
+                        type="text" 
+                        id="nome-item" 
+                        name="nome" 
+                        class="form-input" 
+                        placeholder="Ex: iPhone 13 Preto"
+                        required
+                        maxlength="100"
+                    >
+                    <span class="error-message" id="nome-error"></span>
+                </div>
+
+                <!-- Categoria -->
+                <div class="form-group">
+                    <label for="categoria-item">
+                        <span class="label-required">*</span> Categoria:
+                    </label>
+                    <select id="categoria-item" name="categoria" class="form-input" required>
+                        <option value="">Selecione uma categoria</option>
+                        <option value="eletronicos">Eletrônicos</option>
+                        <option value="documentos">Documentos</option>
+                        <option value="acessorios">Acessórios</option>
+                        <option value="roupas">Roupas</option>
+                        <option value="outros">Outros</option>
+                    </select>
+                    <span class="error-message" id="categoria-error"></span>
+                </div>
+
+                <!-- Descrição -->
+                <div class="form-group">
+                    <label for="descricao-item">Descrição:</label>
+                    <textarea 
+                        id="descricao-item" 
+                        name="descricao" 
+                        class="form-input form-textarea" 
+                        placeholder="Descreva detalhes do item (cor, marca, características especiais...)"
+                        rows="4"
+                        maxlength="500"
+                    ></textarea>
+                    <small class="char-count" id="char-count">0/500</small>
+                    <span class="error-message" id="descricao-error"></span>
+                </div>
+
+                <!-- Localização -->
+                <div class="form-group">
+                    <label for="localizacao-item">
+                        <span class="label-required">*</span> Localização:
+                    </label>
+                    <div class="input-group">
+                        <input 
+                            type="text" 
+                            id="localizacao-item" 
+                            name="localizacao" 
+                            class="form-input" 
+                            placeholder="Digite o local..."
+                            required
+                        >
+                        <button type="button" class="btn btn-icon" onclick="obterLocalizacaoAutomatica()">
+                            <i class="fas fa-location-crosshairs"></i>
+                        </button>
+                    </div>
+                    <div id="mapa-preview" class="mapa-preview" style="display: none;">
+                        <p>Localização capturada: <strong id="local-capturado"></strong></p>
+                    </div>
+                    <span class="error-message" id="localizacao-error"></span>
+                </div>
+
+                <!-- Data -->
+                <div class="form-group">
+                    <label for="data-item">
+                        <span class="label-required">*</span> Data:
+                    </label>
+                    <input 
+                        type="date" 
+                        id="data-item" 
+                        name="data" 
+                        class="form-input"
+                        required
+                    >
+                    <span class="error-message" id="data-error"></span>
+                </div>
+
+                <!-- Fotos -->
+                <div class="form-group">
+                    <label for="fotos-item">Fotos do Item:</label>
+                    <div class="upload-area" id="upload-area">
+                        <input 
+                            type="file" 
+                            id="fotos-item" 
+                            name="fotos" 
+                            class="file-input" 
+                            accept="image/*" 
+                            multiple
+                            style="display: none;"
+                        >
+                        <i class="fas fa-cloud-arrow-up"></i>
+                        <p>Clique para selecionar ou arraste arquivos</p>
+                        <small>Máximo 5 fotos, até 5MB cada</small>
+                    </div>
+                    <div id="preview-container" class="preview-container"></div>
+                    <span class="error-message" id="fotos-error"></span>
+                </div>
+
+                <!-- Contato -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email-item">
+                            <span class="label-required">*</span> Email:
+                        </label>
+                        <input 
+                            type="email" 
+                            id="email-item" 
+                            name="email" 
+                            class="form-input"
+                            required
+                        >
+                        <span class="error-message" id="email-error"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefone-item">
+                            <span class="label-required">*</span> Telefone:
+                        </label>
+                        <input 
+                            type="tel" 
+                            id="telefone-item" 
+                            name="telefone" 
+                            class="form-input" 
+                            placeholder="(83) 98888-8888"
+                            required
+                        >
+                        <span class="error-message" id="telefone-error"></span>
+                    </div>
+                </div>
+
+                <!-- QR Code -->
+                <div class="form-group">
+                    <label>Gerar QR Code:</label>
+                    <p class="info-text">Um QR Code será gerado automaticamente após o cadastro</p>
+                    <div id="qrcode-container" style="display: none;"></div>
+                </div>
+
+                <!-- Buttons -->
+                <div class="form-buttons">
+                    <button type="reset" class="btn btn-secondary">Limpar</button>
+                    <button type="submit" class="btn btn-primary">Cadastrar Item</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Seção Perfil -->
+        <section id="perfil" class="section section-perfil">
+            <h2>Meu Perfil</h2>
+            
+            <div class="perfil-container">
+                <div class="perfil-info">
+                    <div class="perfil-avatar">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <div class="perfil-dados">
+                        <p><strong>Usuário:</strong> <span id="perfil-usuario">Usuário Anônimo</span></p>
+                        <p><strong>Email:</strong> <span id="perfil-email">Não definido</span></p>
+                        <p><strong>Telefone:</strong> <span id="perfil-telefone">Não definido</span></p>
+                    </div>
+                </div>
+
+                <div class="perfil-stats">
+                    <div class="stat-card">
+                        <i class="fas fa-file-export"></i>
+                        <h3 id="stat-cadastrados">0</h3>
+                        <p>Itens Cadastrados</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-check-circle"></i>
+                        <h3 id="stat-encontrados">0</h3>
+                        <p>Devoluções Bem-sucedidas</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-clock"></i>
+                        <h3 id="stat-recentes">0</h3>
+                        <p>Buscas Recentes</p>
+                    </div>
+                </div>
+
+                <div class="perfil-historico">
+                    <h3>Meus Itens Cadastrados</h3>
+                    <div id="historico-itens" class="historico-grid">
+                        <p class="info-text">Nenhum item cadastrado ainda</p>
+                    </div>
+                </div>
+
+                <div class="perfil-preferencias">
+                    <h3>Preferências</h3>
+                    <div class="preferencia-item">
+                        <label class="switch">
+                            <input type="checkbox" id="notif-checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                        <p>Receber notificações de correspondências</p>
+                    </div>
+                    <div class="preferencia-item">
+                        <label class="switch">
+                            <input type="checkbox" id="email-checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                        <p>Receber alertas por email</p>
+                    </div>
+                </div>
+
+                <button class="btn btn-secondary" onclick="limparDados()">Limpar Dados Locais</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal Detalhes Item -->
+    <dialog id="modal-detalhes">
+        <div class="modal-content">
+            <span class="close" onclick="fecharModal('modal-detalhes')">&times;</span>
+            <div id="modal-detalhes-conteudo"></div>
+        </div>
+    </dialog>
+
+    <!-- Toast Notificações -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <!-- Scripts -->
+    <script src="lib/qrcode.min.js"></script>
+    <script src="../Backend/validation.js"></script>
+    <script src="../Backend/storage.js"></script>
+    <script src="../Backend/geolocation.js"></script>
+    <script src="../Backend/qrcode.js"></script>
+    <script src="../Backend/search.js"></script>
+    <script src="../Backend/app.js"></script>
 </body>
-<div>
-    <input type="button" value="voltar" class="back-button"onclick="history.back()">
-</div>
 </html>
