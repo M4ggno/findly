@@ -11,6 +11,7 @@
     background-position: 10px center;
     background-size: 16px;
     transition: all 0.25s ease;
+    margin-left: 85%;
 }
 
 .back-button:hover {
