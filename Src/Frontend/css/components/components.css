@@ -11,7 +11,7 @@
     background-position: 10px center;
     background-size: 16px;
     transition: all 0.25s ease;
-    margin-left: 90%;
+    margin-left: 85%;
 }
 
 .back-button:hover {
@@ -37,6 +37,7 @@
     width: 300px;
     max-width: 100%;
     box-sizing: border-box;
+    margin-left: 15px;
 }
 
 .busca-input-container .busca-icon-fa {
@@ -74,6 +75,7 @@
     width: 300px;
     max-width: 100%;
     box-sizing: border-box;
+    margin-left: 15px;
 }
 
 .input-container .icon {
@@ -117,6 +119,7 @@
     width: 300px;
     max-width: 100%;
     box-sizing: border-box;
+    margin-left: 15px;
 }
 .horario-input-container .horario-icon-fa {
     font-size: 1.2em;
@@ -149,6 +152,7 @@
     width: 300px;
     max-width: 100%;
     box-sizing: border-box;
+    margin-left: 15px;
 }
 .gps-input-container .gps-icon-fa {
     font-size: 1.2em; 
