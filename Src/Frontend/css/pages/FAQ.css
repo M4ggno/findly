@@ -1,0 +1,103 @@
+body {
+    background-color: #ffffff;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h4{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    padding-right: 20px; 
+    margin-bottom: 10px;
+}
+
+.h2_1{
+    color: #5F5D90;
+    margin-left: 15px;
+}
+
+.h1_1{
+    margin-left: 15px;
+}
+
+.faixa-preta {
+    background-color: #000000;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-bottom: 1px solid #333;
+}
+
+.perfil-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.circulo-logo-novo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #4CAF50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #fff;
+    overflow: hidden;
+}
+
+.logo-imagem-nova {
+    width: 100%; 
+    height: 100%;
+    object-fit: contain; 
+}
+
+.nome-usuario-header {
+    color: white;
+    font-size: 1.5em;
+}
+
+.page-container {
+    max-width: 900px;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.contener{
+    width: 841px;
+    height: 641px;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 2%;
+    box-shadow: 20px 30px 10px -10px gray;
+}
+.espasso{
+    margin-left: 2%;
+}
+.espasso_2{
+    margin-right: 2%;
+    background-color: black;
+}
+
+.icon-indicator{
+    font-size: 20px;
+    color: #888;
+    line-height: 1;
+}
+
+.settings-link {
+    text-decoration: none;
+    color: black;
+}
+
+.settings-link .fa-cog {
+    font-size: 28px;
+    margin-left: 96%;
+}
