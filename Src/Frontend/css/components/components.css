@@ -221,3 +221,32 @@
     margin: 5px 0 0 0;
     align-self: flex-end; 
 }
+
+/*Butão de voultar da tela faq*/
+.button {
+    background-color: #f0f0f0;
+    border: none;
+    padding: 10px 10px 10px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    background-image: url("../../assets/icons/back-arrow.png");
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    background-size: 16px;
+    transition: all 0.25s ease;
+    margin-left: 80%;
+}
+
+.button:hover {
+    background-color: #e0e0e0;
+    transform: translateY(-2px);
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.15);
+    background-position: 6px center;
+}
+.button:active {
+    transform: translateY(0);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    background-position: 10px center;
+}
