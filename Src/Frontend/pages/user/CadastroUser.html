@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <title>Cadastro | FINDLY</title>
   <link rel="stylesheet" href="/Src/Frontend/css/pages/cadastro.css" />
+  <link rel="stylesheet" href="/Src/Frontend/css/components/components.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
 </head>
 <body>
@@ -11,7 +12,7 @@
     <span class="circle-logo">
       <img src="/Src/Frontend/assets/image/logo-findly.jpg" alt="Logo FINDLY" class="header-logo">
     </span>
-    <span class="logo-text">FINDLY</span>
+    <span class="logo-text">FINDLY</span><input type="button" value="voltar" class="back-button">
   </header>
   <div class="site-bg">
     <div class="cadastro-main">
@@ -27,7 +28,7 @@
         </div>
         <div class="cadastro-side">
           <span class="login-question">Já tem uma conta?</span>
-          <span class="login-link">Faça login!</span>
+          <span class="login-link"><a href="/Src/Frontend/pages/user/login.html">Faça login!</a></span>
           <div class="bloco-voltar">
             <button class="voltar-btn">&lt; voltar</button>
           </div>
@@ -60,7 +61,7 @@
             <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
           </div>
         </div>
-        <button type="submit" class="main-btn">Cadastrar</button>
+        <button type="submit" class="main-btn"><a href="home.html" class="a_02">Cadastrar</a></button>
       </form>
     </div>
   </div>
