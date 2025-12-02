@@ -3,36 +3,34 @@
 <head>
   <meta charset="UTF-8" />
   <title>Login | FINDLY</title>
-  <link rel="stylesheet" href="/css/pages/login.css" />
+  <link rel="stylesheet" href="/Src/Frontend/css/pages/login.css" />
+  <link rel="stylesheet" href="/Src/Frontend/css/components/components.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="shortcut icon" href="../../assets/icons/favicon.ico" type="image/x-icon">
 </head>
 <body>
   <header class="header">
     <span class="circle-logo">
-      <img src="/assets/image/logo-findly.jpg" alt="Logo FINDLY" class="header-logo">
+      <img src="/Src/Frontend/assets/image/logo-findly.jpg" alt="Logo FINDLY" class="header-logo">
     </span>
-    <span class="logo-text">FINDLY</span>
+    <span class="logo-text">FINDLY</span><input type="button" value="voltar" class="back-button">
   </header>
   <div class="site-bg">
     <div class="container container-full">
-      <div class="register-hint">
-        <span class="register-question">Não tem uma conta?</span>
-        <span class="register-link">Cadastre-se!</span>
-      </div>
       <h1 class="login-title">Login:</h1>
       <button class="google-btn">
-        <img src="/assets/image/google.png" class="icon-google" alt="Google" />
+        <img src="/Src/Frontend/assets/image/google.png" class="icon-google" alt="Google" />
         <span class="google-text"><strong>Inicie sua sessão com o google</strong></span>
       </button>
-      <a href="#" class="alt-login">ou com seu e-mail e senha:</a>
+      <a href="#" class="alt-login">Ou entre com sua conta do Google:</a>
       <form class="form-login">
         <div class="input-group">
-          <img src="/assets/image/email.png" class="input-icon" />
+          <img src="/Src/Frontend/assets/image/email.png" class="input-icon" />
           <label for="login-email"><strong><em>Email:</em></strong></label>
           <input type="text" id="login-email" name="login-email" placeholder="Digite seu email" required>
         </div>
         <div class="input-group">
-          <img src="/assets/image/security-interface.png" class="input-icon" />
+          <img src="/Src/Frontend/assets/image/security-interface.png" class="input-icon" />
           <label for="login-senha"><strong><em>Senha:</em></strong></label>
           <input type="password" id="login-senha" name="login-senha" placeholder="Crie uma senha" required>
         </div>
@@ -43,8 +41,12 @@
           </label>
           <a href="#" class="forgot">Esqueceu sua senha?</a>
         </div>
-        <button type="submit" class="main-btn">Entrar</button>
+        <button type="submit" class="main-btn"><a href="home.html" class="a_01">Entrar</a></button>
       </form>
+    </div>
+    <div class="register-hint">
+      <span class="register-question">Não tem uma conta?</span>
+      <span class="register-link"><a href="/Src/Frontend/pages/user/CadastroUser.html">Cadastre-se!</a></span>
     </div>
   </div>
 </body>

@@ -1,0 +1,262 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #FFFFFF;
+}
+
+/* Header */
+.header {
+  background-color: #000000;
+  padding: 10px 30px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  height: 60px;
+}
+
+.circle-logo {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: #9DB4C4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.header-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.logo-text {
+  color: #FFFFFF;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.site-bg {
+  background-color: #FFFFFF;
+  min-height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column; /* ATUALIZAÇÃO: coluna para alinhar tudo embaixo */
+  justify-content: flex-start;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 380px;
+  background-color: #FFFFFF;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.register-hint {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 35px;
+  margin-bottom: 20px;
+  gap: 8px;
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.register-question {
+  color: #5b5b8a;
+  font-style: italic;
+  font-weight: 700;
+}
+
+.register-link {
+  color: #5b5b8a;
+  font-style: italic;
+  font-weight: 400;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.login-title {
+  font-size: 48px;
+  font-weight: 900;
+  color: #000000;
+  margin-bottom: 25px;
+  font-style: italic;
+  line-height: 1.1;
+  order: 2;
+}
+
+.google-btn {
+  width: 100%;
+  background-color: #D5D5D5;
+  border: none;
+  border-radius: 20px;
+  padding: 11px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  order: 6;
+}
+
+.google-btn:hover {
+  background-color: #CCCCCC;
+}
+
+.icon-google {
+  width: 17px;
+  height: 17px;
+}
+
+.google-text {
+  font-size: 13px;
+  color: #000000;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.alt-login {
+  display: block;
+  text-align: left;
+  font-size: 12px;
+  color: #000000;
+  text-decoration: underline;
+  margin-bottom: 16px;
+  cursor: pointer;
+  font-weight: 700;
+  font-style: italic;
+  order: 5;
+}
+
+.form-login {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 20px;
+  order: 3;
+}
+
+.input-group {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.input-icon {
+  position: absolute;
+  left: 14px;
+  top: 32px;
+  width: 16px;
+  height: 16px;
+}
+
+.input-group label {
+  font-size: 13px;
+  color: #000000;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px 14px 10px 38px;
+  border: none;
+  border-radius: 20px;
+  background-color: #D8D8D8;
+  font-size: 13px;
+  font-family: 'Inter', sans-serif;
+  color: #000000;
+  outline: none;
+}
+
+.input-group input::placeholder {
+  color: #9A9A9A;
+}
+
+.input-group input:focus {
+  background-color: #CCCCCC;
+}
+
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+  margin-top: 10px;
+  gap: 10px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  color: #000000;
+  font-weight: 700;
+  font-size: 11px;
+  flex-shrink: 0;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 13px;
+  height: 13px;
+  cursor: pointer;
+  accent-color: #000000;
+  flex-shrink: 0;
+}
+
+.forgot {
+  color: #000000;
+  text-decoration: underline;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 11px;
+  margin-left: auto;
+}
+
+.main-btn {
+  width: fit-content;
+  background-color: #000000;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 50px;
+  padding: 8px 32px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  font-style: italic;
+  margin-top: 8px;
+  margin-bottom: 0px;
+  order: 4;
+}
+
+.main-btn:hover {
+  background-color: #222222;
+}
+
+@media (max-width: 500px) {
+  .container {
+    max-width: 100%;
+  }
+  .login-title {
+    font-size: 40px;
+  }
+}
+.a_01{
+  color: white;
+}
