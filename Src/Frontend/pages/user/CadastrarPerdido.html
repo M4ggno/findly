@@ -6,47 +6,72 @@
 <link rel="shortcut icon" href="../../assets/icons/favicon.ico" type="image/x-icon">
 <title>Findly - Cadastre um item perdido</title>
 </head>
+
 <body>
 
   <header>
-    <img src="findly.jpg" alt="Logo Findly">
-    FINDLY
+    <div class="left">
+      <a href="#"><img src="https://i.ibb.co/tMW3HMbF/Findly.jpg" alt="Findly"></a>
+      <h3>FINDLY</h3>
+    </div>
+
+    <a class="voltar-link" href="#">&lt; voltar</a>
   </header>
 
   <div class="container">
-    <!-- Coluna esquerda -->
-    <div class="left-column">
-      <h3>Ver seus itens:</h3>
-      <h2>Cadastre um item perdido:</h2>
-
-      <label for="descricao">Descrição do item:</label>
-      <input type="text" id="descricao" placeholder="Ex: Carteira de couro preta">
-
-      <label for="categoria">Categoria:</label>
-      <input type="text" id="categoria" placeholder="Ex: Eletrônico, Roupa, Documento...">
-
-      <label for="foto">Fotos do item:</label>
-      <input type="file" id="foto" class="file-input" multiple>
-
-      <label for="pontoColeta">Ponto de Coleta deixado:</label>
-      <input type="text" id="pontoColeta" placeholder="Ex: Recepção, portaria, sala de achados e perdidos...">
-
-      <label for="qrcode">QR Code:</label>
-      <input type="text" id="qrcode" placeholder="Digite ou escaneie o QR Code do item">
+    <div class="titles-left">
+      <h3>
+        <span class="ver-seus">Ver seus</span>
+        <span class="itens">itens:</span>
+      </h3>
     </div>
 
-    <!-- Coluna direita -->
+    <h2 class="title-main">
+      <span class="blue-dark">Cadastre o item</span><br />
+      <span class="blue-light">perdido:</span>
+    </h2>
+
+    <div class="left-column">
+
+      <div class="input-icon">
+        <i class="fa-solid fa-id-badge"></i>
+        <input type="text" id="iditem" placeholder="ID do item" />
+      </div>
+
+      <div class="input-icon">
+        <i class="fa-solid fa-qrcode"></i>
+        <input type="text" id="qrcode" placeholder="QR Code" />
+      </div>
+
+      <div class="input-icon">
+        <i class="fa-regular fa-calendar-days"></i>
+        <input type="text" id="dataPerda" placeholder="Data e hora da perda" />
+      </div>
+
+      <div class="input-icon">
+        <i class="fa-solid fa-location-dot"></i>
+        <input type="text" id="pontoColeta" placeholder="Ponto de Coleta deixado" />
+      </div>
+
+    </div>
+
     <div class="right-fields">
 
-      <label for="iditem">ID do item:</label>
-      <input type="text" id="iditem" placeholder="Digite o ID do item">
+      <div class="input-icon">
+        <i class="fa-solid fa-upload"></i>
+        <input type="text" id="foto" placeholder="Fotos do item" />
+      </div>
 
-      <label for="dataPerda">Data e hora da perda:</label>
-      <input type="datetime-local" id="dataPerda">
+      <div class="input-icon">
+        <i class="fa-solid fa-list"></i>
+        <input type="text" id="categoria" placeholder="Categoria" />
+      </div>
 
-      <button class="back-btn">&lt; voltar</button>
+      <span class="bottom-text">
+        <span class="cadastro-de-itens">Cadastro de itens </span>
+        <span class="encontrados">encontrados.</span>
+      </span>
 
-      <span class="bottom-text">Cadastro de itens encontrados:</span>
     </div>
   </div>
 
