@@ -1,0 +1,139 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: #fff;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+h3 {
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+}
+
+header {
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+header img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+main {
+  padding: 20px;
+  margin-left: 200px;
+}
+
+.subtitulo {
+  margin-top: 20px;
+  font-size: 1.2em;
+}
+
+.azul {
+  color: #5F5D90;
+  font-weight: bold;
+}
+
+.cinza {
+  color: #888;
+}
+
+h1 {
+  font-size: 28.8px;
+  margin: 10px 0 30px 0;
+  font-weight: bold;
+}
+
+.info-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 600px;
+}
+
+.info-item {
+  background-color: #e5e5e5;
+  padding: 10px 15px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.botoes {
+  display: flex;
+  flex-direction: column; 
+  gap: 20px; 
+  align-items: flex-end; 
+  margin-top: -20px;
+  margin-right: 200px;
+}
+
+
+.cinza-btn {
+  background-color: #e5e5e5;
+  color: #000;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif; 
+  font-weight: 800;                 
+  font-style: italic;
+  margin-top: -135px;
+
+}
+
+.voltar {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 25px;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: 'Inter', sans-serif; 
+  font-weight: 800;                 
+  font-style: italic;
+}
+
+.rota {
+  margin-top: 50px;
+  text-align: center;
+  
+}
+
+.rota-btn {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 12px 40px;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif; 
+  font-weight: 800;                 
+  font-style: italic;
+  margin-top: 70px;
+  margin-right: 150px;
+}
+
+.logo-img {
+    width: 60px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.info-item {
+  background-color: #e5e5e5;
+  padding: 10px 15px;
+  border-radius: 20px;
+  font-weight: bold;
+  display: flex;          
+  align-items: center;    
+  gap: 10px;              
+}
