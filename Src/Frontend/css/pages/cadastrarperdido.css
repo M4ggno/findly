@@ -157,6 +157,8 @@ h2.title-main .blue-light {
   font-style: italic;
   margin-top: 20px;
   font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.3s;
 }
 
 .cadastro-de-itens {
