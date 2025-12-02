@@ -177,6 +177,10 @@
     color: #333333;
 }
 
+.form{
+    margin-left: 80%;
+}
+
 /* Componentes Otávio Meus Itens */
 /* Estilização dosS Campos de texto / data */
 
@@ -236,7 +240,7 @@
     background-position: 10px center;
     background-size: 16px;
     transition: all 0.25s ease;
-    margin-left: 80%;
+    margin-left: 20%;
 }
 
 .button:hover {
