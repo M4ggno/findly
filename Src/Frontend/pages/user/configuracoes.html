@@ -5,8 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Configurações - Findly</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="configuracoes.css">
+  <link rel="stylesheet" href="/Src/Frontend/css/pages/configuracoes.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="/Src/Frontend/css/components/components.css">
 </head>
 <body>
   <header>
@@ -36,7 +37,7 @@
 
       <h2 class="conta"><i class="fas fa-user"></i> Conta</h2>
       <div class="editar">
-      <a href="#">Editar perfil</a> |
+      <a href="/Src/Frontend/pages/user/MeuPerfil.html">Editar perfil</a> |
       <a href="#">Excluir conta</a>
       </div>
     </div>
@@ -51,8 +52,10 @@
   </div>
 
   <div class="footer">
-    <p><a href="#">Acessar <strong>termos de uso</strong></a> e <a href="#">política de privacidade</a>.</p>
-    <button class="voltar">&lt; voltar</button>
+    <p><a href="/Src/Frontend/pages/user/FAQ.html">Precisa de <strong>Ajuda?</strong></a></p>
+    <form action="/Src/Frontend/pages/user/home.html" method="get">
+      <input type="button" value="voltar" class="back-button">
   </div>
+    </form>
 </body>
 </html>
