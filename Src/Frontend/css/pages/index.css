@@ -1,0 +1,276 @@
+/* ===== RESET + TIPOGRAFIA ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    background: #fff;
+    color: #111;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ===== VARS ===== */
+:root {
+    --nav-bg: #000000;
+    --dark-bg: #0b0b0b;
+    --purple: #6f4bd8;
+    --pill-bg: #e9e7e4;
+    --pill-text: #111;
+    --light-blue: #eef8ff;
+    --illustration-bg: #d7eef8;
+}
+
+/* ===== NAV ===== */
+.topnav {
+    background: var(--nav-bg);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 6%;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 10px
+}
+
+.logo {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%
+}
+
+.brand {
+    color: #fff;
+    font-weight: 600
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    align-items: center
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px
+}
+
+.configuracoes {
+    background: none;
+    border: 0;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 8px
+}
+
+.configuracoes img {
+    width: 22px;
+    height: 22px;
+    display: block
+}
+.configuracoes:hover {
+    background: rgba(255, 255, 255, 0.1)
+    
+}
+
+/* ===== SECTIONS BASE ===== */
+.section {
+    width: 100%
+}
+
+.container {
+    max-width: 1150px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    padding: 60px 6%;
+    justify-content: space-between;
+}
+
+.row-reverse {
+    flex-direction: row-reverse
+}
+
+/* text block */
+.text-block {
+    max-width: 52%
+}
+
+.title {
+    color: #fff;
+    font-size: 44px;
+    line-height: 1.03;
+    font-weight: 800;
+    margin-bottom: 18px;
+}
+
+.heading {
+    color: #0b0b0b;
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 1.05;
+    margin-bottom: 16px;
+}
+
+.subtitle {
+    color: var(--purple);
+    font-weight: 700;
+    font-style: italic;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+p {
+    margin-bottom: 8px;
+    color: #222;
+    line-height: 1.4
+}
+
+
+.image-box {
+    max-width: 40%;
+    display: flex;
+    justify-content: center
+}
+
+.image-box img {
+    width: 360px;
+    height: 360px;
+    object-fit: contain;
+    background: var(--illustration-bg);
+    padding: 18px;
+    border-radius: 4px;
+    display: block;
+}
+
+/* pill button */
+.pill-btn {
+    display: inline-block;
+    background: var(--pill-bg);
+    color: var(--pill-text);
+    padding: 12px 30px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 700;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
+}
+
+.pill-btn:hover {
+    transform: translateY(-2px);
+    transition: all .12s ease
+}
+
+/* section backgrounds */
+.dark-section {
+    background: var(--dark-bg)
+}
+
+.light-blue-section {
+    background: var(--light-blue)
+}
+
+.light-section {
+    background: #ffffff
+}
+
+/* footer */
+.site-footer {
+    background: var(--nav-bg);
+    color: #dcdcdc;
+    padding: 36px 6%
+}
+
+.footer-inner {
+    max-width: 1150px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    gap: 18px
+}
+
+.footer-links a {
+    color: #dcdcdc;
+    text-decoration: none
+}
+
+/* RESPONSIVE */
+@media (max-width:1000px) {
+    .image-box img {
+        width: 300px;
+        height: 300px
+    }
+
+    .title {
+        font-size: 38px
+    }
+
+    .heading {
+        font-size: 28px
+    }
+
+    .container {
+        gap: 28px;
+        padding: 48px 5%
+    }
+}
+
+@media (max-width:720px) {
+    .nav-links {
+        display: none
+    }
+
+    .container {
+        flex-direction: column-reverse;
+        text-align: center;
+        align-items: center;
+        gap: 20px;
+        padding: 30px 4%
+    }
+
+    .image-box img {
+        width: 70vw;
+        height: 70vw;
+        max-width: 360px;
+        max-height: 360px
+    }
+
+    .text-block {
+        max-width: 100%
+    }
+
+    .title {
+        font-size: 30px
+    }
+
+    .heading {
+        font-size: 22px
+    }
+
+    .pill-btn {
+        padding: 10px 22px
+    }
+}
