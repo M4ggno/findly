@@ -10,12 +10,12 @@ body {
 }
 
 .header {
-  background-color: #000;
-  padding: 12px 32px;
+  background-color: #000000;
+  padding: 10px 30px;
   display: flex;
   align-items: center;
-  gap: 12px;
-  height: 54px;
+  gap: 15px;
+  height: 60px;
 }
 
 .circle-logo {
@@ -27,6 +27,7 @@ body {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  flex-shrink: 0;
 }
 
 .header-logo {
@@ -36,10 +37,9 @@ body {
 }
 
 .logo-text {
-  color: #fff;
+  color: #FFFFFF;
   font-size: 18px;
   font-weight: 400;
-  letter-spacing: 1px;
 }
 
 .site-bg {
